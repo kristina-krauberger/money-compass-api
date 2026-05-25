@@ -98,7 +98,7 @@ retriever = vectorstore.as_retriever()  # Retriever: semantic search over the ve
 llm = ChatOpenAI(
     api_key=OPENAI_API_KEY,
     model="gpt-4o-mini",
-    temperature=0.3
+    temperature=0.1
 )
 
 

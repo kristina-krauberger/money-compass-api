@@ -25,11 +25,11 @@ def ai_coach():
     """
 
     user_data = {
-        "age": 20,
+        "age": 60,
         "monthlySavings": 100,
-        "investmentHorizon": "langfristig",
-        "priorityReturn": 70,
-        "prioritySecurity": 20,
+        "investmentHorizon": "kurzfristig",
+        "priorityReturn": 30,
+        "prioritySecurity": 60,
         "priorityLiquidity": 10
     }
 
