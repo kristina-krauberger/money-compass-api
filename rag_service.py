@@ -82,7 +82,7 @@ def setup_rag():
     rag_vectorstore = QdrantVectorStore.from_documents(
         documents=chunks,
         embedding=embeddings,
-        url="https://ddc00627-77aa-4f63-8a67-5c90b03d15b8.europe-west3-0.gcp.cloud.qdrant.io:6333",
+        url="https://2ae93c26-c736-43f9-b09d-6dffe60ad4c1.eu-central-1-0.aws.cloud.qdrant.io",
         api_key=QDRANT_API_KEY,
         collection_name="portfolio_docs"
     )

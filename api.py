@@ -11,10 +11,17 @@ Responsibilities:
 Acts as the controller layer, keeping business logic in rag_service.py.
 """
 
-from flask import Flask
+from flask import Flask, request, make_response
 from rag_service import generate_response
 
 app = Flask(__name__)
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 @app.route('/api/ai-coach', methods=['GET', 'POST'])
 def ai_coach():
@@ -23,15 +30,17 @@ def ai_coach():
 
     Returns: str: AI-generated response
     """
-
-    user_data = {
-        "age": 60,
-        "monthlySavings": 100,
-        "investmentHorizon": "kurzfristig",
-        "priorityReturn": 30,
-        "prioritySecurity": 60,
-        "priorityLiquidity": 10
-    }
+    if request.method == 'POST':
+        user_data = request.get_json() or {}
+    else:
+        user_data = {
+            "age": 60,
+            "monthlySavings": 100,
+            "investmentHorizon": "kurzfristig",
+            "priorityReturn": 30,
+            "prioritySecurity": 60,
+            "priorityLiquidity": 10
+        }
 
     # Call RAG service to generate response
     response = generate_response(user_data)
