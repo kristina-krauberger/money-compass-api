@@ -11,6 +11,7 @@ Responsibilities:
 Acts as the controller layer, keeping business logic in rag_service.py.
 """
 
+import os
 from flask import Flask, request, make_response
 from rag_service import generate_response
 
@@ -59,6 +60,8 @@ def health():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5004)
+    # Get port from environment variable, default to 5004 if not found
+    port = int(os.environ.get('PORT', 5004))
+    app.run(host='0.0.0.0', port=port)
 
 
