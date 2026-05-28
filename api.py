@@ -57,9 +57,9 @@ def ai_coach_welcome():
         "name": "Clara",
         "role": "Dein Money Compass Coach",
         "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
-        "title": "Hi, ich bin Clara! Lass uns dein Geld wachsen lassen! 🚀",
-        "paragraph1": "Ich helfe dir dabei, das absolute Maximum aus deinen Finanzen herauszuholen! Lass uns keine Zeit verschwenden. Trage links einfach deine Daten ein (deine Sparrate, dein Alter, Anlagehorizont und deine Prioritäten) und klicke auf \"Ergebnis anzeigen\".",
-        "paragraph2": "Ich erstelle dir dann umgehend eine rendite- und wachstumsoptimierte ETF- und Anlagestrategie, die perfekt zu deiner Lebenssituation passt. Lass uns loslegen!"
+        "title": "Hey, mega, dass du startest! Bereit für deinen ersten echten Schritt? 🚀",
+        "paragraph1": "In den Buddy.Fi Lektionen hast du gelernt, wie Vermögensaufbau theoretisch funktioniert. Jetzt bringen wir dieses Wissen direkt in die Praxis! Du musst kein Finanzprofi sein und brauchst keine Angst vor Fachbegriffen wie 'Asset Allocation' zu haben. Ich nehme dich einfach an die Hand.",
+        "paragraph2": "Trage links deine Daten ein. Ich zeige dir ganz konkret, wie du z.B. 100 € aufteilst – wie viel in einen weltweiten ETF wie den MSCI World fließt und warum das Sinn macht. Das wird der allererste Meilenstein für deinen Sparplan!"
     }
 
 
