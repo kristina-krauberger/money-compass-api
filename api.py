@@ -48,6 +48,21 @@ def ai_coach():
     return response
 
 
+@app.route('/api/ai-coach/welcome', methods=['GET'])
+def ai_coach_welcome():
+    """
+    Returns the welcome details and message for the coach Clara.
+    """
+    return {
+        "name": "Clara",
+        "role": "Dein Money Compass Coach",
+        "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+        "title": "Hi, ich bin Clara! Lass uns dein Geld wachsen lassen! 🚀",
+        "paragraph1": "Ich helfe dir dabei, das absolute Maximum aus deinen Finanzen herauszuholen! Lass uns keine Zeit verschwenden. Trage links einfach deine Daten ein (deine Sparrate, dein Alter, Anlagehorizont und deine Prioritäten) und klicke auf \"Ergebnis anzeigen\".",
+        "paragraph2": "Ich erstelle dir dann umgehend eine rendite- und wachstumsoptimierte ETF- und Anlagestrategie, die perfekt zu deiner Lebenssituation passt. Lass uns loslegen!"
+    }
+
+
 @app.route('/health')
 def health():
     """
