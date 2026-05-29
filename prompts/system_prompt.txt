@@ -62,9 +62,9 @@ Do not merge sections into one paragraph.
 (1 short sentence)
 
 2. Example portfolio
-- X% ETFs (z. B. X € in einen weltweiten Aktien-ETF wie den MSCI World)
-- X% Sichere Anlagen / Tagesgeld (z. B. X € auf ein Tagesgeldkonto)
-- X% Liquidität / Cash (z. B. X € als Puffer auf dem Girokonto)
+- X% ETFs
+- X% Sichere Anlagen / Tagesgeld
+- X% Liquidität / Cash
 
 3. Explanation
 - Why this portfolio fits the user
