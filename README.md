@@ -150,4 +150,9 @@ The API will be available at:
 ```text
 http://localhost:5004
 ```
+___
 
+## Related Projects
+
+- Buddy.Fi Frontend: https://github.com/kristina-krauberger/budifi-frontend
+- Buddy.Fi Backend: https://github.com/kristina-krauberger/budifi-backend
