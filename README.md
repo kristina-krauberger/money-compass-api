@@ -1,63 +1,153 @@
 # Money Compass Service API
 
-Backend service for the Money Compass AI Investment Recommendation System.
+RAG-powered investment recommendation API built with Flask, OpenAI, LangChain, and Qdrant.
 
-This API is responsible for handling user input, processing recommendation logic, and generating AI-based responses using LLMs and RAG-style context.
+The system transforms structured financial user inputs into personalized portfolio recommendations by combining Retrieval-Augmented Generation (RAG), financial knowledge documents, and LLM-based reasoning.
+
+---
+
+## Architecture Overview
+
+<p align="center">
+  <img src="./assets/money_compass_architecture.png" width="100%">
+</p>
+
+---
+
+## Demo
+
+<p align="center">
+  <img src="./assets/money_compass_demo.gif" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://www.loom.com/share/c255ca2a9a404d3c8bb2b502bffd2034">
+    ▶ Watch Full Product Demo
+  </a>
+</p>
 
 ---
 
 ## Overview
 
-The Money Compass Service API acts as the backend layer of the system.
+Money Compass was built to explore how Retrieval-Augmented Generation (RAG) can be applied to personal finance education.
 
-It connects:
+The API combines:
+- Structured financial user input
+- Financial knowledge documents
+- Semantic search with Qdrant
+- OpenAI embeddings
+- LLM-generated portfolio explanations
 
-- user input from the frontend  
-- decision logic (prompt-based)  
-- LLM-generated responses  
-- RAG-style context (portfolio documents)  
-
-The goal is to return a simple, human-friendly investment recommendation.
+The goal is to translate financial concepts into simple, actionable recommendations for beginners.
 
 ---
 
-## Current Status
+## How It Works
 
-In development  
+### Offline Indexing
 
-Current state:
+1. Load portfolio guide PDFs
+2. Split documents into chunks
+3. Create embeddings using OpenAI
+4. Store vectors in Qdrant
 
-- basic Flask app setup  
-- environment configuration  
-- initial API structure (WIP)  
+### Online Query Flow
 
-Planned:
+1. Receive user profile data
+2. Build a natural-language query
+3. Retrieve relevant document chunks from Qdrant
+4. Combine retrieved context with a system prompt
+5. Generate a response using GPT-4o-mini
+6. Return a personalized portfolio recommendation
 
-- recommendation endpoint (`/api/money-compass`)  
-- prompt-based decision logic  
-- integration with LLM API  
-- RAG-style context retrieval  
+---
+
+## Features
+
+- Retrieval-Augmented Generation (RAG)
+- Semantic search with Qdrant
+- OpenAI Embeddings (`text-embedding-3-small`)
+- GPT-4o-mini response generation
+- Financial knowledge retrieval from PDF documents
+- REST API built with Flask
+- Configurable system prompts
+  
+---
+
+## API Endpoints
+
+```text
+
+POST   /api/ai-coach
+GET    /api/ai-coach
+GET    /api/ai-coach/welcome
+GET    /health
+
+```
+---
+
+## Project Structure
+
+```text
+money_compass/
+│
+├── api.py
+├── rag_service.py
+├── requirements.txt
+├── .env
+│
+├── prompts/
+│   └── system_prompt.txt
+│
+├── data/
+│   ├── ausgewogenes_portfolio.pdf
+│   ├── sicherheitsorientiertes_portfolio.pdf
+│   └── wachstumsorientiertes_portfolio.pdf
+│
+└── assets/
+    ├── money_compass_architecture.png
+    └── money_compass_demo.gif
+```
 
 ---
 
 ## Tech Stack
 
-Python  
-Flask  
-dotenv  
-
-Planned:
-
-LLM API (OpenAI or similar)  
-Prompt Engineering  
-RAG (context-based retrieval)
+- Python
+- Flask
+- LangChain
+- OpenAI
+- Qdrant
+- PyMuPDF
+- dotenv
 
 ---
 
-## Project Structure
+## Local Development
+
+Install dependencies:
 
 ```bash
-.
-├── api.py
-├── .env
-└── TBD
+pip install -r requirements.txt
+```
+
+Create a `.env` file:
+
+```dotenv
+SECRET_KEY_OPENAI=your-key
+SECRET_KEY_QDRANT=your-key
+```
+
+Start the API:
+
+```bash
+python api.py
+```
+
+Default port:
+
+```text
+http://localhost:5004
+```
+
