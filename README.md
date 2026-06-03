@@ -100,9 +100,7 @@ money_compass/
 │   └── system_prompt.txt
 │
 ├── data/
-│   ├── ausgewogenes_portfolio.pdf
-│   ├── sicherheitsorientiertes_portfolio.pdf
-│   └── wachstumsorientiertes_portfolio.pdf
+│   └── Financial knowledge documents
 │
 └── assets/
     ├── system_design.png
@@ -139,13 +137,15 @@ SECRET_KEY_OPENAI=your-key
 SECRET_KEY_QDRANT=your-key
 ```
 
+Add PDF knowledge documents to the `data/` folder.
+
 Start the API:
 
 ```bash
 python api.py
 ```
 
-Default port:
+The API will be available at:
 
 ```text
 http://localhost:5004
