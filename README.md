@@ -22,7 +22,7 @@ The system transforms structured financial user inputs into personalized portfol
 
 <p align="center">
   <a href="https://www.loom.com/share/c255ca2a9a404d3c8bb2b502bffd2034">
-    ▶ Watch Full Product Demo
+    ▶ Watch Product Demo (4 min)
   </a>
 </p>
 
