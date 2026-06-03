@@ -9,7 +9,7 @@ The system transforms structured financial user inputs into personalized portfol
 ## Architecture Overview
 
 <p align="center">
-  <img src="./assets/money_compass_architecture.png" width="100%">
+  <img src="./assets/system_design.png" width="100%">
 </p>
 
 ---
@@ -17,7 +17,7 @@ The system transforms structured financial user inputs into personalized portfol
 ## Demo
 
 <p align="center">
-  <img src="./assets/money_compass_demo.gif" width="100%">
+  <img src="./assets/demo_money_compass.gif" width="100%">
 </p>
 
 <p align="center">
