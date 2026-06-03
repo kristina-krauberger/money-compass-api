@@ -71,8 +71,7 @@ The goal is to translate financial concepts into simple, actionable recommendati
 - GPT-4o-mini response generation
 - Financial knowledge retrieval from PDF documents
 - REST API built with Flask
-- Configurable system prompts
-  
+
 ---
 
 ## API Endpoints
@@ -106,8 +105,8 @@ money_compass/
 │   └── wachstumsorientiertes_portfolio.pdf
 │
 └── assets/
-    ├── money_compass_architecture.png
-    └── money_compass_demo.gif
+    ├── system_design.png
+    └── demo_money_compass.gif
 ```
 
 ---
@@ -121,6 +120,7 @@ money_compass/
 - Qdrant
 - PyMuPDF
 - dotenv
+- REST API
 
 ---
 
